@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/sign/style.css' %}">
+    <title>Register With Us</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form method="POST">
+                {% csrf_token %}
+                <h1>Create Account</h1>
+                <input type="text" name ="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="tel" placeholder="Phone Number" required>
+                <select name="register_as" id="register-as" required>
+                    <option value="" disabled selected>Register As</option>
+                    <option value="service-provider">Service Provider</option>
+                    <option value="client">Client</option>
+                </select>
+                <input type="password" name="password1" placeholder="Create a Password" required>
+                <input type="password" name="password2" placeholder="Re-enter Password" required>
+                <div>
+                    {% for message in messages %}
+                        <h6>{{ message }}</h6>
+                    {% endfor %}
+                </div>
+                <button>Sign Up</button>
+                <a class="hidden" id="login">Existing User?</a>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form method="POST">
+                {% csrf_token %}
+                <h1>Sign In</h1>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password1" placeholder="Password">
+                <a href="#">Forgot Your Password?</a>
+                <div>
+                    {% for message in messages %}
+                        <h6>{{ message }}</h6>
+                    {% endfor %}
+                </div>
+                <button>Sign In</button>
+                <a class="hidden" id="register">New User?</a>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <img src="{% static 'images/scales.png' %}" alt="image">
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="{% static 'images/scales.png' %}" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/sign/script.js' %}"></script>
+</body>
+</html>

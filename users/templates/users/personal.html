@@ -1,0 +1,536 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LawConnect</title>
+    <link href="{% static 'css/form/form.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="{% static 'css/form/style.css' %}">
+    <script src="{% static 'js/form/validation.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                <a href="index.html"
+                    class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase" style="font-size: 3vw">
+                        LawConnect
+                    </h1>
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">
+                            LawConnect
+                        </h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <div class="nav" style="gap: 15vh">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="about.html" class="nav-item nav-link">Virtual Leagal Advisor</a>
+                                <a href="service.html" class="nav-item nav-link">ADR</a>
+                                <a href="team.html" class="nav-item nav-link">Online Notary</a>
+                            </div>
+                        </div>
+                        <div class="ima">
+                            <img src="{% static 'images/bg.jpg' %}" alt="" style="height: 3vw" />
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="zf-templateWidth">
+        <form
+            name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+            accept-charset='UTF-8' enctype='multipart/form-data' id='form'>
+            {% csrf_token %}
+            <input type="hidden" name="zf_referrer_name"
+                value="">
+                <!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+             
+            <input type="hidden" name="zf_redirect_url"
+                value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+            <input type="hidden" name="zc_gad"
+                value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+            <div class="zf-templateWrapper"><!---------template Header Starts Here---------->
+                <ul class="zf-tempHeadBdr">
+                    <li class="zf-tempHeadContBdr">
+                        <h2 class="zf-frmTitle"><em>Personal Details</em></h2>
+
+                        <div class="zf-clearBoth">
+
+                        </div>
+                    </li>
+                </ul>
+                <!---------template Header Ends Here---------->
+                <!---------template Container Starts Here---------->
+                <div class="zf-subContWrap zf-topAlign">
+                    <ul>
+                        <!---------Name Starts Here---------->
+                        <li class="zf-tempFrmWrapper zf-name zf-namelarge"><label class="zf-labelName">
+                                Name
+                            </label>
+                            <div class="zf-tempContDiv zf-twoType">
+                                <div class="zf-nameWrapper">
+                                    <span> <input type="text" maxlength="255" name="Name_First" fieldType=7
+                                            placeholder="" /> <label>First Name</label>
+                                    </span>
+                                    </span> </span>
+                                    <span> <input type="text" maxlength="255" name="Name_Last" fieldType=7
+                                            placeholder="" /> <label>Last Name</label>
+                                    </span>
+                                    </span> </span>
+                                    <div class="zf-clearBoth"></div>
+                                </div>
+                                <p id="Name_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </li><!---------Name Ends Here---------->
+                        <!---------Date Starts Here---------->
+                        <li class="zf-tempFrmWrapper zf-date"><label class="zf-labelName">
+                                DOB
+                            </label>
+                            <div class="zf-tempContDiv">
+                                <span> <input type="text" name="Date" checktype="c4" value="" maxlength="25"
+                                        placeholder="" /><label>dd-MMM-yyyy</label> </span>
+                                <div class="zf-clearBoth"></div>
+                                <p id="Date_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </li><!---------Date Ends Here---------->
+                        <!---------Radio Starts Here---------->
+                        <li class="zf-radio zf-tempFrmWrapper zf-sideBySide"><label class="zf-labelName">Gender
+                            </label>
+                            <div class="zf-tempContDiv">
+                                <div class="zf-overflow">
+                                    <span class="zf-multiAttType">
+                                        <input class="zf-radioBtnType" type="radio" id="Radio_1" name="Radio"
+                                            checktype="c1" value="Male">
+                                        <label for="Radio_1" class="zf-radioChoice">Male</label> </span>
+                                    <span class="zf-multiAttType">
+                                        <input class="zf-radioBtnType" type="radio" id="Radio_2" name="Radio"
+                                            checktype="c1" value="Female">
+                                        <label for="Radio_2" class="zf-radioChoice">Female</label> </span>
+                                    <span class="zf-multiAttType">
+                                        <input class="zf-radioBtnType" type="radio" id="Radio_1" name="Radio"
+                                            checktype="c1" value="Male">
+                                        <label for="Radio_1" class="zf-radioChoice">Other</label> </span>
+
+                                    <div class="zf-clearBoth"></div>
+                                </div>
+                                <p id="Radio_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </li><!---------Radio Ends Here---------->
+                        <!---------Single Line Starts Here---------->
+
+
+                        <!---------Dropdown Starts Here---------->
+                        <li class="zf-tempFrmWrapper zf-large"><label class="zf-labelName">
+                                Work As
+                            </label>
+                            <div class="zf-tempContDiv">
+                                <select class="zf-form-sBox" name="Dropdown" checktype="c1">
+                                    <option selected="true" value="-Select-">-Select-</option>
+                                    <option value="Grade&#x20;1">Advocate</option>
+                                    <option value="Grade&#x20;2">Lawyer</option>
+                                    <option value="Grade&#x20;3">Advisor</option>
+
+                                </select>
+                                <p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </li><!---------Dropdown Ends Here---------->
+                        <!---------Name Starts Here---------->
+                        <li class="zf-tempFrmWrapper zf-name zf-namelarge"><label class="zf-labelName">
+                                Father Name
+                            </label>
+                            <div class="zf-tempContDiv zf-twoType">
+                                <div class="zf-nameWrapper">
+                                    <span> <input type="text" maxlength="255" name="Name1_First" fieldType=7
+                                            placeholder="" /> <label>First Name</label>
+                                    </span>
+                                    </span> </span>
+                                    <span> <input type="text" maxlength="255" name="Name1_Last" fieldType=7
+                                            placeholder="" /> <label>Last Name</label>
+                                    </span>
+                                    </span> </span>
+                                    <div class="zf-clearBoth"></div>
+                                </div>
+                                <p id="Name1_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </li><!---------Name Ends Here---------->
+                        <!-- ---------Radio-2 start------- -->
+                        <li class="zf-radio zf-tempFrmWrapper zf-sideBySide"><label class="zf-labelName">Are You also
+                                Interested in join as
+                            </label>
+                            <div class="zf-tempContDiv">
+                                <div class="zf-overflow">
+                                    <span class="zf-multiAttType">
+                                        <input class="zf-radioBtnType" type="radio" id="Radio_1" name="Radio2"
+                                            checktype="c1" value="Male">
+                                        <label for="Radio_1" class="zf-radioChoice">Arbitrator</label> </span>
+                                    <span class="zf-multiAttType">
+                                        <input class="zf-radioBtnType" type="radio" id="Radio_2" name="Radio2"
+                                            checktype="c1" value="Female">
+                                        <label for="Radio_2" class="zf-radioChoice">Mediator</label> </span>
+                                    <span class="zf-multiAttType">
+                                        <input class="zf-radioBtnType" type="radio" id="Radio_1" name="Radio2"
+                                            checktype="c1" value="Male">
+                                        <label for="Radio_1" class="zf-radioChoice"><strong>Pro-Bono
+                                                Lawyer</strong></label> </span>
+
+                                    <div class="zf-clearBoth"></div>
+                                </div>
+                                <p id="Radio_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+                            </div>
+                            <div class="zf-clearBoth"></div>
+                        </li>
+                        <!-- ---------Radio-2 End---------- -->
+                        <!-- -----------Contact Details------ -->
+                        <div class="zf-templateWidth-1">
+                            <form
+                               
+                                name='form' method='POST'
+                                onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+                                accept-charset='UTF-8' enctype='multipart/form-data' id='form'>
+                                {% csrf_token %}
+                                <input type="hidden"
+                                    name="zf_referrer_name"
+                                    value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+
+                                <input type="hidden" name="zf_redirect_url"
+                                    value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                                <input type="hidden" name="zc_gad"
+                                    value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                                <div class="zf-templateWrapper"><!---------template Header Starts Here---------->
+                                    <ul class="zf-tempHeadBdr">
+                                        <li class="zf-tempHeadContBdr">
+                                            <h2 class="zf-frmTitle"><em>Contact Details</em></h2>
+
+                                            <div class="zf-clearBoth">
+
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <!---------Phone Starts Here---------->
+                                    <li class="zf-tempFrmWrapper zf-large"><label class="zf-labelName">
+                                            Phone Number
+                                        </label>
+                                        <div class="zf-tempContDiv zf-phonefld">
+                                            <div class="zf-phwrapper zf-phNumber">
+                                                <span> <input type="text" compname="PhoneNumber"
+                                                        name="PhoneNumber_countrycode" maxlength="20" checktype="c7"
+                                                        value="" phoneFormat="1" isCountryCodeEnabled=false
+                                                        fieldType="11" id="international_PhoneNumber_countrycode"
+                                                        valType="number" phoneFormatType="1" placeholder="" />
+                                                    <label>Number</label> </span>
+                                                <div class="zf-clearBoth"></div>
+                                            </div>
+                                            <p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">
+                                                Invalid value</p>
+                                        </div>
+                                        <div class="zf-clearBoth"></div>
+                                    </li><!---------Phone Ends Here---------->
+                                    <li class="zf-tempFrmWrapper zf-large"><label class="zf-labelName">
+                                            Alternative Number
+                                        </label>
+                                        <div class="zf-tempContDiv zf-phonefld">
+                                            <div class="zf-phwrapper zf-phNumber">
+                                                <span> <input type="text" compname="PhoneNumber"
+                                                        name="PhoneNumber_countrycode1" maxlength="20" checktype="c7"
+                                                        value="" phoneFormat="1" isCountryCodeEnabled=false
+                                                        fieldType="11" id="international_PhoneNumber_countrycode"
+                                                        valType="number" phoneFormatType="1" placeholder="" />
+                                                    <label>Number</label> </span>
+                                                <div class="zf-clearBoth"></div>
+                                            </div>
+                                            <p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">
+                                                Invalid value</p>
+                                        </div>
+                                        <div class="zf-clearBoth"></div>
+                                    </li><!---------Phone Ends Here---------->
+                                    <!---------Email Starts Here---------->
+                                    <li class="zf-tempFrmWrapper zf-large"><label class="zf-labelName">
+                                            Email Address
+                                        </label>
+                                        <div class="zf-tempContDiv">
+                                            <span> <input fieldType=9 type="text" maxlength="255" name="Email"
+                                                    checktype="c5" value="" placeholder="" /></span>
+                                            <p id="Email_error" class="zf-errorMessage" style="display:none;">Invalid
+                                                value</p>
+                                        </div>
+                                        <div class="zf-clearBoth"></div>
+                                    </li>
+                                    <!---------Email Ends Here---------->
+                                    <!-- -----------Contact End----------- -->
+                                    <!-- ---------------Address----------->
+                                    <div class="zf-templateWidth-2">
+                                        <form
+                                            
+                                            name='form' method='POST'
+                                            onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+                                            accept-charset='UTF-8' enctype='multipart/form-data' id='form'>
+                                            {% csrf_token %}
+                                            <input
+                                                type="hidden" name="zf_referrer_name"
+                                                value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                                            <input type="hidden" name="zf_redirect_url"
+                                                value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                                            <input type="hidden" name="zc_gad"
+                                                value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                                            <div class="zf-templateWrapper">
+                                                <!---------template Header Starts Here---------->
+                                                <ul class="zf-tempHeadBdr">
+                                                    <li class="zf-tempHeadContBdr">
+                                                        <h2 class="zf-frmTitle"><em>Address Details</em></h2>
+
+                                                        <div class="zf-clearBoth">
+
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                                <!---------Single Line Starts Here---------->
+
+                                                <li class="zf-tempFrmWrapper zf-name zf-namelarge"><label
+                                                        class="zf-labelName">
+                                                        Name
+                                                    </label>
+                                                    <div class="zf-tempContDiv zf-twoType">
+                                                        <div class="zf-nameWrapper">
+                                                            <span> <input type="text" maxlength="255" name="Name_Firstadd"
+                                                                    fieldType=7 placeholder="" /> <label
+                                                                    style="font-size: 1.5vw;">Flat / House No. / Street
+                                                                    Name</label>
+                                                            </span>
+                                                            </span> </span>
+                                                            <span> <input type="text" maxlength="255" name="Name_Lastadd"
+                                                                    fieldType=7 placeholder="" /> <label
+                                                                    style="font-size: 1.5vw;">City</label>
+                                                            </span>
+                                                            </span> </span>
+                                                            <div class="zf-clearBoth"></div>
+                                                        </div>
+                                                        <p id="Name_error" class="zf-errorMessage"
+                                                            style="display:none;">Invalid value</p>
+                                                    </div>
+                                                    <div class="zf-clearBoth"></div>
+                                                </li>
+                                                <li class="zf-tempFrmWrapper zf-name zf-namelarge">
+                                                    <div class="zf-tempContDiv zf-twoType">
+                                                        <div class="zf-nameWrapper-1"
+                                                            style="display: flex; justify-content: space-evenly;">
+                                                            <span> <input type="text" maxlength="255" name="Name_FirstS"
+                                                                    fieldType=7 placeholder="" /> <label
+                                                                    style="font-size: 1.5vw;">State</label>
+                                                            </span>
+
+                                                            <span> <input type="text" maxlength="255" name="Name_LastPC"
+                                                                    fieldType=7 placeholder="" /> <label
+                                                                    style="font-size: 1.5vw;">Pin Code</label>
+                                                            </span>
+                                                            <span> <input type="text" maxlength="255" name="Name_LastC"
+                                                                    fieldType=7 placeholder="" /> <label
+                                                                    style="font-size: 1.5vw;">Country</label>
+                                                            </span>
+
+                                                            <div class="zf-clearBoth"></div>
+                                                        </div>
+                                                        <p id="Name_error" class="zf-errorMessage"
+                                                            style="display:none;">Invalid value</p>
+                                                    </div>
+                                                    <div class="zf-clearBoth"></div>
+                                                </li>
+
+                                                <!-- ---------------Addres Ends----------- -->
+                                                <!-- ------------Education Detals Start---------- -->
+                                                <div class="zf-templateWidth-2">
+                                                    <form
+                                                        
+                                                        name='form' method='POST'
+                                                        onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+                                                        accept-charset='UTF-8' enctype='multipart/form-data' id='form'>
+                                                        {% csrf_token %}
+                                                        <input type="hidden" name="zf_referrer_name"
+                                                            value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                                                        <input type="hidden" name="zf_redirect_url"
+                                                            value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                                                        <input type="hidden" name="zc_gad"
+                                                            value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                                                        <div class="zf-templateWrapper">
+                                                            <!---------template Header Starts Here---------->
+                                                            <ul class="zf-tempHeadBdr">
+                                                                <li class="zf-tempHeadContBdr">
+                                                                    <h2 class="zf-frmTitle"><em>Educational Details</em>
+                                                                    </h2>
+
+                                                                    <div class="zf-clearBoth">
+
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+
+                                                            <!---------Multiple Line Starts Here---------->
+                                                            <li class="zf-tempFrmWrapper zf-large"><label
+                                                                    class="zf-labelName">
+                                                                    College/ University
+                                                                </label>
+                                                                <div class="zf-tempContDiv">
+                                                                    <span> <textarea name="MultiLine" checktype="c1"
+                                                                            maxlength="65535" placeholder=""></textarea>
+                                                                    </span>
+                                                                    <p id="MultiLine_error" class="zf-errorMessage"
+                                                                        style="display:none;">Invalid value</p>
+                                                                </div>
+                                                                <div class="zf-clearBoth"></div>
+                                                            </li>
+
+                                                            <li class="zf-tempFrmWrapper zf-large"><label
+                                                                    class="zf-labelName">
+                                                                    Course Description
+                                                                </label>
+                                                                <div class="zf-tempContDiv">
+                                                                    <span> <textarea name="MultiLine1" checktype="c1"
+                                                                            maxlength="65535" placeholder=""></textarea>
+                                                                    </span>
+                                                                    <p id="MultiLine1_error" class="zf-errorMessage"
+                                                                        style="display:none;">Invalid value</p>
+                                                                </div>
+                                                                <div class="zf-clearBoth"></div>
+                                                            </li>
+
+                                                            <!-- ------------Education End---------- -->
+                                                            <!-- ----------Work Exp Start---------- -->
+                                                            <!-- ------------Education Detals Start---------- -->
+                                                            <div class="zf-templateWidth-2">
+                                                                <form
+                                                                    
+                                                                    name='form' method='POST'
+                                                                    onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+                                                                    accept-charset='UTF-8' enctype='multipart/form-data'
+                                                                    id='form'>
+                                                                    {% csrf_token %}
+                                                                    <input type="hidden"
+                                                                        name="zf_referrer_name"
+                                                                        value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+                                                                    <input type="hidden" name="zf_redirect_url"
+                                                                        value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+                                                                    <input type="hidden" name="zc_gad"
+                                                                        value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+                                                                    <div class="zf-templateWrapper">
+                                                                        <!---------template Header Starts Here---------->
+                                                                        <ul class="zf-tempHeadBdr">
+                                                                            <li class="zf-tempHeadContBdr">
+                                                                                <h2 class="zf-frmTitle"><em>Work
+                                                                                        Experience</em></h2>
+
+                                                                                <div class="zf-clearBoth">
+
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+
+
+                                                                        <li class="zf-tempFrmWrapper zf-large"><label
+                                                                                class="zf-labelName">
+                                                                                Company/Cout
+                                                                            </label>
+                                                                            <div class="zf-tempContDiv">
+                                                                                <span> <textarea name="MultiLineC"
+                                                                                        checktype="c1" maxlength="65535"
+                                                                                        placeholder=""></textarea>
+                                                                                </span>
+                                                                                <p id="MultiLine_error"
+                                                                                    class="zf-errorMessage"
+                                                                                    style="display:none;">Invalid value
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="zf-clearBoth"></div>
+                                                                        </li>
+
+
+                                                                        <li class="zf-tempFrmWrapper zf-large"><label
+                                                                                class="zf-labelName">
+                                                                                Job Description
+                                                                            </label>
+                                                                            <div class="zf-tempContDiv">
+                                                                                <span> <textarea name="MultiLine1C"
+                                                                                        checktype="c1" maxlength="65535"
+                                                                                        placeholder=""></textarea>
+                                                                                </span>
+                                                                                <p id="MultiLine1_error"
+                                                                                    class="zf-errorMessage"
+                                                                                    style="display:none;">Invalid value
+                                                                                </p>
+                                                                            </div>
+                                                                            <div class="zf-clearBoth"></div>
+                                                                        </li>
+                                                                        <!---------Multiple Line Ends Here---------->
+                                                                        <!-- ------------Education End---------- -->
+                                                                        <!-- ----------Work Exp End---------- -->
+                                                                        <!--fileupload-->
+                                                                        <!---------File Upload Starts Here---------->
+                                                                        <div class="upload">
+                                                                            <li class="zf-tempFrmWrapper"><label
+                                                                                    class="zf-labelName">Adhar
+                                                                                </label>
+                                                                                <div class="zf-tempContDiv">
+                                                                                    <input type="file" name="FileUpload"
+                                                                                        checktype="c1" />
+                                                                                    <p id="FileUpload_error"
+                                                                                        class="zf-errorMessage"
+                                                                                        style="display:none;">Choose any
+                                                                                        file for this field.</p>
+                                                                                </div>
+                                                                                <div class="zf-clearBoth"></div>
+                                                                            </li>
+                                                                            <!---------File Upload Ends Here---------->
+                                                                            <!--Image Upload-->
+                                                                            <!---------Image Upload Starts Here---------->
+                                                                            <li class="zf-tempFrmWrapper"><label
+                                                                                    class="zf-labelName">Bar council Certificate
+                                                                                </label>
+                                                                                <div class="zf-tempContDiv">
+                                                                                    <input type="file" accept="image/*"
+                                                                                        name="ImageUpload"
+                                                                                        checktype="c1" />
+                                                                                    <p id="ImageUpload_error"
+                                                                                        class="zf-errorMessage"
+                                                                                        style="display:none;">Choose any
+                                                                                        file for this field.</p>
+                                                                                </div>
+                                                                                <div class="zf-clearBoth"></div>
+                                                                            </li>
+                                                                        </div>
+                                                                        <!---------Image Upload Ends Here---------->
+                                                                        <div class="bttn">
+                                                                            <a href="http://127.0.0.1:5502/form.html">
+
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <!---------template Container Starts Here---------->
+                                                                        <script type="text/javascript">var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
+                                                                            var zf_MandArray = [];
+                                                                            var zf_FieldArray = ["Name_First", "Name_Last", "Date", "Radio", "SingleLine", "Dropdown", "Name1_First", "Name1_Last", "PhoneNumber_countrycode", "Email", "SingleLine1", "MultiLine", "MultiLine1", "FileUpload", "ImageUpload", "FileUpload1", "TermsConditions"];
+                                                                            var isSalesIQIntegrationEnabled = false;
+                                                                            var salesIQFieldsArray = [];</script>
+                                                            <button type="submit">Submit</button>
+</body> 
+
+</html>

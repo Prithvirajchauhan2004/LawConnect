@@ -1,0 +1,617 @@
+{% load static  %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LawConnect</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/index/style.css' %}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 bg-secondary d-none d-lg-block">
+          <a
+            href="index.html"
+            class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
+          >
+            <h1 class="m-0 display-4 text-primary text-uppercase" style="font-size: 3.3vw;">
+                
+              LawConnect
+            </h1>
+          </a>
+        </div>
+      
+          <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+              <h1 class="m-0 display-4 text-primary text-uppercase" style="font-size: 3.5vw;">LawConnect</h1>
+            </a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarCollapse"
+            >
+              <div class="navbar-nav mr-auto py-0" style="gap: 4vh;">
+                <a style="margin-left: 5vw;" href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link">ADR</a>
+                <a href="#" class="nav-item nav-link">Virtual Leagl Assistance</a>
+                <a href="#" class="nav-item nav-link">Online Notary</a>
+                <a href="#" class="nav-item nav-link">Case Status</a>
+                
+                 
+                
+              </div>
+              <a href="" style="margin-left: 20vh;" class="btn btn-primary mr-3 d-none d-lg-block"
+                >Login/SignUp</a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+      <div
+        id="header-carousel"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            class="carousel-item position-relative active"
+            style="height: 100vh; min-height: 400px"
+          >
+            <img
+              class="position-absolute w-100 h-100"
+              src="https://plus.unsplash.com/premium_photo-1674727219372-4ba6644106bc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              style="object-fit: cover"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+              
+                <h3 class="display-2 text-capitalize text-white mb-4" style="font-size: 9vw;">
+                  LawConnect
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item position-relative"
+            style="height: 100vh; min-height: 400px"
+          >
+            <img
+              class="position-absolute w-100 h-100"
+              src="https://images.unsplash.com/photo-1617203443952-6d2619f7ff4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              style="object-fit: cover"
+            />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 900px">
+              
+                <h3 class="display-2 text-capitalize text-white mb-4">
+                  We are the best <strong>Leagl Service Provider</strong>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#header-carousel"
+          data-slide="prev"
+        >
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#header-carousel"
+          data-slide="next"
+        >
+        </a>
+      </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+   
+    <!-- About End -->
+
+    <!-- Services Start -->
+      <!-- Service Start -->
+      <div class="service">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-landmark"></i>
+                        </div>
+                        <h3>Virtual Legal Assistance</h3>
+                        <p>
+                            Virtual legal assistants handle various administrative tasks.
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <h3>ADR</h3>
+                        <p>
+                           Neutral third party who helps the parties to communicate, discuss differences and resolve the case.
+                        </p>
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Advocates Near You</h3>
+                        <p>
+                          You will easily find the lawyers near you and there contact details.
+                            
+                        </p>
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <h3>Online Noaries</h3>
+                        <p>
+                          You can get access for Online Notaris and Notaries your document Online.
+                        </p>
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-gavel"></i>
+                        </div>
+                        <h3>Legal Drafts</h3>
+                        <p>
+                         You can get access law and includes legal language that's appropriate for the document 
+                        </p>
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <h3>Pro Bono Lawyers</h3>
+                        <p>
+                         In our Platform we provide poor and underprivileged clients with valuable legal advice.                     </p>
+                        <a class="btn" href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+   
+    <!-- Features Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6" style="min-height: 500px">
+            <div class="position-relative h-100 rounded overflow-hidden">
+              <img
+                class="position-absolute w-100 h-100"
+                src="{% static 'img/feature.jpg' %}"
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 pt-5 pb-lg-5">
+            <div class="feature-text bg-white rounded p-lg-5">
+              <h6 class="text-uppercase">Our Features</h6>
+              <h1 class="mb-4">Why Choose Us</h1>
+              <div class="d-flex mb-4">
+                <div
+                  class="btn-primary btn-lg-square px-3"
+                  style="border-radius: 50px"
+                >
+                  <h5 class="text-secondary m-0">01</h5>
+                </div>
+                <div class="ml-4">
+                  <h5>Best Law Practices</h5>
+                  <p class="m-0">
+                    Clients often prioritize legal service providers with a proven track record and expertise in the specific area of law relevant to their needs.                  </p>
+                </div>
+              </div>
+              <div class="d-flex mb-4">
+                <div
+                  class="btn-primary btn-lg-square px-3"
+                  style="border-radius: 50px"
+                >
+                  <h5 class="text-secondary m-0">02</h5>
+                </div>
+                <div class="ml-4">
+                  <h5>Efficiency & Trust</h5>
+                  <p class="m-0">
+                    Clear, open, and timely communication is crucial. Clients value legal service providers who keep them informed, explain complex legal concepts in a straightforward manner, and promptly respond to inquiries.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div
+                  class="btn-primary btn-lg-square px-3"
+                  style="border-radius: 50px"
+                >
+                  <h5 class="text-secondary m-0">03</h5>
+                </div>
+                <div class="ml-4">
+                  <h5>Results You Deserve</h5>
+                  <p class="m-0">
+                    Clear, open, and timely communication is crucial. Clients value legal service providers who keep them informed, explain complex legal concepts in a straightforward manner, and promptly respond to inquiries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Team Start -->
+     <!-- Team Start -->
+     <div class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Top Legal Advisors</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-1.jpg' %}" alt="Team Image">
+                        </div>
+                        <div class="team-text">
+                            <h2>Adam Phillips</h2>
+                            <p>Business Consultant</p>
+                            <div class="team-social">
+                                <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-2.jpg' %}" alt="Team Image">
+                        </div>
+                        <div class="team-text">
+                            <h2>Dylan Adams</h2>
+                            <p>Criminal Consultant</p>
+                            <div class="team-social">
+                                <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-3.jpg' %}" alt="Team Image">
+                        </div>
+                        <div class="team-text">
+                            <h2>Gloria Edwards</h2>
+                            <p>Divorce Consultant</p>
+                            <div class="team-social">
+                                <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'img/team-4.jpg' %}" alt="Team Image">
+                        </div>
+                        <div class="team-text">
+                            <h2>Josh Dunn</h2>
+                            <p>Immigration Consultant</p>
+                            <div class="team-social">
+                                <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+          <div class="text-center pb-5">
+              <h6 class="text-uppercase">Testimonial</h6>
+              <h1 class="mb-5">What Our Clients Say</h1>
+          </div>
+          <div class="owl-carousel testimonial-carousel">
+              <div class="testimonial-item">
+                  <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                      Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                  </div>
+                  <div class="d-flex align-items-center pt-3">
+                      <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-1.jpg' %}" style="width: 80px; height: 80px;" alt="">
+                      <div class="pl-4">
+                          <h5>Client Name</h5>
+                          <p class="m-0">Profession</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="testimonial-item">
+                  <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                      Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                  </div>
+                  <div class="d-flex align-items-center pt-3">
+                      <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-2.jpg' %}" style="width: 80px; height: 80px;" alt="">
+                      <div class="pl-4">
+                          <h5>Client Name</h5>
+                          <p class="m-0">Profession</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="testimonial-item">
+                  <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                      Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                  </div>
+                  <div class="d-flex align-items-center pt-3">
+                      <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-3.jpg' %}" style="width: 80px; height: 80px;" alt="">
+                      <div class="pl-4">
+                          <h5>Client Name</h5>
+                          <p class="m-0">Profession</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="testimonial-item">
+                  <div class="testimonial-text position-relative bg-secondary text-light rounded p-5 mb-4">
+                      Sed ea amet kasd elitr stet nonumy, stet rebum et ipsum est duo elitr clita lorem
+                  </div>
+                  <div class="d-flex align-items-center pt-3">
+                      <img class="img-fluid rounded-circle" src="{% static 'img/testimonial-4.jpg' %}" style="width: 80px; height: 80px;" alt="">
+                      <div class="pl-4">
+                          <h5>Client Name</h5>
+                          <p class="m-0">Profession</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5"
+      style="margin-top: 90px"
+    >
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <div
+            class="d-flex justify-content-lg-center p-4"
+            style="background: rgba(256, 256, 256, 0.05)"
+          >
+            <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+            <div class="ml-3">
+              <h5 class="text-white">Our Office</h5>
+              <p class="m-0">Akgec, Ghaziabad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div
+            class="d-flex justify-content-lg-center p-4"
+            style="background: rgba(256, 256, 256, 0.05)"
+          >
+            <i class="fa fa-2x fa-envelope-open text-primary"></i>
+            <div class="ml-3">
+              <h5 class="text-white">Email Us</h5>
+              <p class="m-0">LawConnect@example.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div
+            class="d-flex justify-content-lg-center p-4"
+            style="background: rgba(256, 256, 256, 0.05)"
+          >
+            <i class="fa fa-2x fa-phone-alt text-primary"></i>
+            <div class="ml-3">
+              <h5 class="text-white">Call Us</h5>
+              <p class="m-0">999999999</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a href="index.html" class="navbar-brand">
+            <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">
+              LawConnect
+            </h1>
+          </a>
+          <p>
+            
+          </p>
+          <div class="d-flex justify-content-start mt-4">
+            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Home</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>ADR</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Virtual Leagl Assistance</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Notaries</a
+            >
+            <a class="text-white" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Contact</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>FAQs</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Help</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Terms</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Privacy</a
+            >
+            <a class="text-white" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Site Map</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4>
+          <p>
+            Ultimately, the choice of a legal service provider depends on the specific needs and preferences of the client. Conducting thorough research, seeking referrals, and assessing
+          </p>
+          <div class="w-100">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control border-0"
+                style="padding: 25px"
+                placeholder="Your Email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-primary px-4">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row p-4 mt-5 mx-0"
+        style="background: rgba(256, 256, 256, 0.05)"
+      >
+        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+          <p class="m-0 text-white">
+            &copy; <a class="font-weight-bold" href="#">LawConnect</a>. All
+            Rights Reserved.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="{% static 'mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
